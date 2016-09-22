@@ -1,153 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Reset Stylesheet -->
-    <link rel="stylesheet" href="../public/css/reset.css">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Title of Page -->
-    <title>Bike Assist</title>
-    <!-- Logo in Tab -->
-    <link rel="icon" sizes="16x16" href="../public/images/bikeassist.png">
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
-    <!-- Styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <!-- My Stylesheet -->
-    <link rel="stylesheet" href="../public/css/style.css">    
+	<meta charset="UTF-8">
+	<title>LearnReact!</title>
+	<link rel="stylesheet" href="./css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="./css/style.css" type="text/css" />
+	<!-- Here we include bootstrap. This will be made available to all of the generated HTML/JS that React generates-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 
-<body id="app-layout"  class="theBack">
-   
-   <!-- Top Navigation Bar -->
-
-    <nav class="navbar navbar-inverse navbar-static-top theBanner">
-                <div class="row" style='width: 100%;'> 
-                    <div class="col-md-2">
-                        <a class="" href="{{ url('/') }}">
-                            <img src="../public/images/bikeassist.png" alt="Logo" height="75" width="75">    
-                        </a>                   
-                    </div>
-                    <div class="col-md-10 text-left theBanner">
-                        <h2>Find Bike Paths and Track your Ride</h2>
-                    </div>
-                </div>
-
-
-
-        <div class="container">
-                
-            
-                <div class="navbar-header theBanner">
-
-                    
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed theBanner" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                    <!-- Branding Image -->
-                    <a class="navbar-brand theBanner" href="{{ URL::asset('/images/bikeassist.png')}}">
-                        
-                    </a>
-                </div> <!-- navbar-header -->
-
-            <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <!-- Left Side Of Navbar -->
-                            <ul class="nav navbar-nav">
-                                <li><a href="{{ url('/home') }}">Home</a></li>
-                                <li><a href="{{ url('/trail') }}">Bike Trails</a></li>
-                                <li><a href="{{ url('/ride') }}">My Rides</a></li>
-                                <li><a href="{{ url('/stats') }}">My Stats</a></li>
-                                <li><a href="{{ url('/chart') }}">My Charts</a></li>
-                                <li><a href="{{ url('/about') }}">About</a></li>
-                                <li><a href="{{ url('/contact') }}">Contact</a></li>
-                            </ul>
-
-                <!-- Right Side Of Navbar -->
-                            <ul class="nav navbar-nav navbar-right theBanner">
-                                <!-- Authentication Links -->
-                                @if (Auth::guest())
-                                    <li><a href="{{ url('/login') }}">Login</a></li>
-                                    <li><a href="{{ url('/register') }}">Register</a></li>
-                                @else
-                                    <li class="dropdown theBanner">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                            {{ Auth::user()->name }} <span class="caret"></span>
-                                        </a>
-
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-                                        </ul>
-                                    </li>
-                                @endif
-                            </ul>
-            </div> <!-- collapse navbar-collapse" id="app-navbar-collapse" -->
-        </div> <!-- container -->
-    </nav> <!-- End Navbar      -->
-    
-    
-
-    
-    
-    <!-- Content from other blades goes here -->
-
-    <!-- @yield('content') -->
-    <div id="app"></div>
-    <!-- Footer -->
-
-    <div class="footer navbar-fixed-bottom">
-        <div class="container text-center">
-            <p>&copy; 2016 John Riepe</p>
-            
-                <tr>
-                    <td><a href="https://www.facebook.com/jriepe" target="_blank" alt='Facebook' data-toggle="tooltip" data-placement="top" title="Facebook"><button type='button' class='fa fa-facebook fa-2x theBanner'></button></a></td>
-                    <td><a href="https://github.com/JRiepe" target="_blank" alt='Github' data-toggle="tooltip" data-placement="top" title="Github"><button type='button' class='fa fa-github fa-2x theBanner'></button></a></td>
-                    <td><a href="https://www.linkedin.com/in/jriepe" target="_blank" alt='LinkedIn' data-toggle="tooltip" data-placement="top" title="LinkedIn"><button type='button' class='fa fa-linkedin fa-2x theBanner'></button></a></td>
-                </tr>
-           
-        </div>
-    </div>
-    
-    <!-- JavaScripts -->
-    
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-    <!-- This is where React will deploy the contents it generates -->
+<body>
 	
+	<!-- This is where React will deploy the contents it generates -->
+	<div id="app"></div>
 
 	<!-- All of our JS code will be transpiled into this bundle.js file -->
 	<script src="bundle.js"></script>
 	
 </body>
 </html>
-    
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>LearnReact!</title>
-	<link rel="stylesheet" href="./css/reset.css" type="text/css" />
-	<link rel="stylesheet" href="./css/style.css" type="text/css" />
-	 -->
-	<!-- Here we include bootstrap. This will be made available to all of the generated HTML/JS that React generates-->
-	
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-</head>
-
-<body>
-	 -->
-	
