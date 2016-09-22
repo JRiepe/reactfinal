@@ -1,0 +1,81 @@
+        body {
+            font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+            color: black;
+            /*background-size: cover;*/
+            /*background-repeat: no-repeat center center-fixed;*/
+            background-image:url('/images/graphy.png');
+            /*position:relative;*/
+        }
+
+        .fa-btn {
+            margin-right: 6px;
+            
+        }
+
+       
+        .theBanner  {
+            background-color: #000000;
+            color: skyblue;
+        }
+
+        .panel-heading {
+            background-color: #ffb54d!important;
+
+        }
+
+
+        .theBack  {
+            background-color: #e6e6e6!important;
+            
+        }
+
+        .container  {
+            
+            height: auto !important;
+            height: 100%;
+              /* Negative indent footer by its height */
+            margin: 0 auto -30px;
+              /* Pad the bottom by footer height */
+            padding: 0 0 30px;
+        }
+        
+        .footer {
+            
+            background-color: #000000;
+            color: skyblue;
+            padding-bottom: 3px;
+        }
+        
+        .map-panel {
+            width: 380px;
+            height: 350px;
+            align-content: center;
+        }
+        img {
+            padding:    5px;
+        }
+
+        .legend {
+            border-style: solid;
+            border-color: orange;
+            border-width: 3px;
+            text-align: center;
+            margin-top: 15px;
+            border-radius: 10px;
+            position: sticky;
+            float: bottom;
+            max-width: 380px;
+
+        }
+
+        .inlegend   {
+            text-align: left;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        hr  {
+            margin: 0px;
+            border-style: solid;
+            border-color: green; 
+            
+        }
