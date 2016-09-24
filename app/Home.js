@@ -9,7 +9,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <div className={styles.app}>
-        <div className="panel panel-default">Home Now!</div>
+        <div className="panel-default">Home Now!</div>
       </div>
     );
   }
