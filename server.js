@@ -59,7 +59,7 @@ app.get('/saved', function(req, res) {
 
 // This is the route we will send POST requests to save each search.
 app.post('/saved', function(req, res){
-  console.log("BODY insert: " + req.body.title);
+  console.log("BODY insert: " + this.title);
 
   // Here we'll save the location based on the JSON input. 
   // We'll use Date.now() to always get the current date time
