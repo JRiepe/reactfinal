@@ -1,8 +1,23 @@
 {
-  "name": "reactfinal",
-  "version": "1.0.0",
-  "description": "",
+  "name": "webpack-express-boilerplate",
+  "version": "0.1.0",
+  "description": "A boilerplate for running a Webpack workflow in Node express",
   "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/christianalfoni/webpack-express-boilerplate.git"
+  },
+  "keywords": [
+    "express",
+    "webpack",
+    "node"
+  ],
+  "author": "Christian Alfoni",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/christianalfoni/webpack-express-boilerplate/issues"
+  },
+  "homepage": "https://github.com/christianalfoni/webpack-express-boilerplate",
   "scripts": {
     "test": "",
     "start": "node server",
@@ -10,32 +25,12 @@
     "eslint": "eslint .",
     "jscs": "jscs ."
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JRiepe/reactfinal.git"
-  },
-  "author": "John Riepe",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JRiepe/reactfinal/issues"
-  },
-  "homepage": "https://github.com/JRiepe/reactfinal#readme",
   "dependencies": {
-    "axios": "^0.13.1",
     "babel-cli": "^6.4.0",
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
-    "minimatch": "^3.0.3",
-    "mongojs": "^2.4.0",
-    "morgan": "^1.7.0",
-    "pug": "^2.0.0-beta6",
-    "react": "^0.14.8",
-    "react-dom": "^0.14.3",
-    "react-router": "^2.6.1",
-    "to-iso-string": "0.0.2"
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3"
   },
   "devDependencies": {
-    "babel-core": "^6.3.13",
     "autoprefixer": "^6.0.3",
     "babel-eslint": "^4.1.6",
     "babel-loader": "^6.2.3",

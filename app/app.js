@@ -1,13 +1,16 @@
-// Include the Main React Dependencies
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react';
+import styles from './App.css';
 
-// Include the Main Component
-var Main = require('./Components/Main')
-
-// This code here allows us to render our main component (in this case "Main")
-ReactDOM.render(
-
-	<Main />,
-	document.getElementById('app')
-)
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {test: 'foo'};
+  }
+  render() {
+    return (
+      <div className={styles.bap}>
+        bar
+      </div>
+    );
+  }
+}
