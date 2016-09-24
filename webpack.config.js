@@ -11,7 +11,7 @@ module.exports = {
     path.join(__dirname, 'app/main.js')
   ],
   output: {
-    path: path.join(__dirname, '/public/'),
+    path: path.join(__dirname, '/dist/'),
     filename: '[name].js',
     publicPath: '/'
   },
@@ -25,7 +25,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('development')
+      'process.env.NODE_ENV': JSON.stringify('production')
     })
   ],
   module: {

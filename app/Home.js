@@ -1,8 +1,7 @@
 import React from 'react';
 import styles from './App.css';
-var Home = require('./Home');
 
-export default class App extends React.Component {
+export default class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {test: 'foo'};
@@ -10,12 +9,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div className={styles.app}>
-        <div className="jumbotron">
-
-        
-            <Home />
-
-       
+        <div className="panel panel-default">Home Now!</div>
       </div>
     );
   }
